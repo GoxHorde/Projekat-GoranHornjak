@@ -1,0 +1,50 @@
+<div class="container d-flex justify-content-center">
+  <img
+    (click)="getProductsByCategory('4')"
+    src="assets/flowers/category1.png"
+    alt=""
+    width="130px"
+  />
+
+  <img
+    (click)="getProductsByCategory('3')"
+    src="assets/flowers/category2.png"
+    alt=""
+    width="130px"
+  />
+  <img
+    (click)="getProductsByCategory('2')"
+    src="assets/flowers/category3.png"
+    alt=""
+    width="130px"
+  />
+  <img
+    (click)="getProductsByCategory('1')"
+    src="assets/flowers/category4.png"
+    alt=""
+    width="130px"
+  />
+</div>
+<div class="container" *ngIf="shopService.products.length">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div *ngFor="let product of shopService.products">
+      <div class="col">
+        <div class="card product-card">
+          <a [routerLink]="['/product', product.id]">
+            <img
+              src="../../assets/flowers/{{ product.image }}"
+              class="card-img-top"
+              alt="Product 1"
+          /></a>
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <!-- <p class="card-text">
+              {{ product.description }}
+            </p> -->
+            <p class="card-text">Price: ${{ product.price }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

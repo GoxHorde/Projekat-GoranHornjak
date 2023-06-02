@@ -1,0 +1,256 @@
+<style>
+  .home-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background-image: url("assets/Resursi/flowerBackground1.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .content {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: #000000;
+  }
+
+  .content h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .form-label-middle {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    border: 0px solid;
+    height: 20px;
+    width: 160px;
+  }
+  .input-borders {
+    margin: 20px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 0.5px solid black;
+  }
+</style>
+
+<body>
+  <div class="home-container">
+    <div class="background-image"></div>
+    <div
+      class="content d-flex flex-column justify-content-center align-items-end"
+    >
+      <h1>March into Spring!</h1>
+      <p>Bring the meadow to them with a daisy bouquet.</p>
+      <button class="btn btn-dark">Shop Now</button>
+    </div>
+  </div>
+  <div class="container-fluid col-md-6 d-flex flex-column">
+    <div class="text-block aling-self-center">
+      <p>
+        Established in 1910, FTD has been a premier provider of a beautiful
+        floarl arrangemenets and gorgeus mixed flower bouquetes for over 100
+        years.
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="product">
+          <img
+            src="assets/Resursi/flower1.jpeg"
+            alt="Product 1"
+            class="img-fluid"
+          />
+          <h4>Fiesta Bouquet</h4>
+          <p>$95</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="product">
+          <img
+            src="assets/Resursi/flower2.jpeg"
+            alt="Product 2"
+            class="img-fluid"
+          />
+          <h4>Alluring Elegance Bouquet</h4>
+          <p>$115</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="product">
+          <img
+            src="assets/Resursi/flower3.jpeg"
+            alt="Product 3"
+            class="img-fluid"
+          />
+          <h4>Beyond Blue Bouquet</h4>
+          <p>$92</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="product">
+          <img
+            src="assets/Resursi/flower4.jpeg"
+            alt="Product 4"
+            class="img-fluid"
+          />
+          <h4>Truly Stunning Bouquet</h4>
+          <p>$108</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="product">
+          <img
+            src="assets/Resursi/flower5.jpeg"
+            alt="Product 1"
+            class="img-fluid"
+          />
+          <h4>Belle of the Ball bouquet</h4>
+          <p>$45</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="product">
+          <img
+            src="assets/Resursi/flower6.jpeg"
+            alt="Product 2"
+            class="img-fluid"
+          />
+          <h4>Rainbow Garden</h4>
+          <p>$50</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="product">
+          <img
+            src="assets/Resursi/flower7.jpeg"
+            alt="Product 3"
+            class="img-fluid"
+          />
+          <h4>Best Day Bouquet</h4>
+          <p>$61</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="product">
+          <img
+            src="assets/Resursi/flower8.jpeg"
+            alt="Product 4"
+            class="img-fluid"
+          />
+          <h4>Smile & Sunshine</h4>
+          <p>$45</p>
+        </div>
+      </div>
+      <div class="col-12 text-center mt-4">
+        <button class="btn btn-light" routerLink="/shop">Load More</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Send us a message</h5>
+        <ul class="list-unstyled">
+          <li><strong>A:</strong> Laze Nančića 7, 21000 Novi SAd</li>
+          <br />
+          <li><strong>T:</strong> 021 422-022</li>
+          <br />
+          <li>office@smartinit.net</li>
+          <br />
+          <li>
+            MON-FRI: 7am - 10pm<br />
+            SATURDAY: 8am - 10pm<br />
+            SUNDAY: -
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="name" class="form-label form-label-middle"
+                >Name</label
+              >
+              <input
+                type="text"
+                class="form-control input-borders"
+                id="name"
+                name="name"
+                placeholder=""
+                required
+                ngModel
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label form-label-middle"
+                >Email</label
+              >
+              <input
+                type="email"
+                class="form-control input-borders"
+                id="email"
+                name="email"
+                placeholder=""
+                required
+                ngModel
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label form-label-middle"
+              >Subject</label
+            >
+            <input
+              type="text"
+              class="form-control input-borders"
+              id="subject"
+              name="subject"
+              placeholder=""
+              required
+              ngModel
+            />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label form-label-middle"
+              >Message</label
+            >
+            <textarea
+              class="form-control input-borders"
+              id="message"
+              name="message"
+              rows="4"
+              placeholder=""
+              required
+              ngModel
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-secondary">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
